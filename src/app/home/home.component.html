@@ -1,0 +1,32 @@
+<h1>Productos pipe async</h1>
+<div>
+    <!-- async indica que cuando resuelve la llamada y productosObs tiene los valores, recorrerá el array-->
+    <div *ngFor="let producto of productosObs | async">
+        <h2>{{producto.title | uppercase}}</h2>
+        <p>{{producto.price | currency:'ARS'}}</p>
+        <!-- <h2>{{producto.title | concatenar:'Esteban':'Hola'}}</h2> -->
+        <!-- <p>{{producto | json}}</p> --> 
+        <button>Ver detalle</button>
+        <button>Comprar</button>
+    </div>
+</div>
+
+<!-- <h1>Productos async / await</h1>
+<div>
+    <div *ngFor="let producto of productosAsync">
+        <h2>{{producto.title | concatenar}}</h2>
+        <p>{{producto.price | currency}}</p>
+    </div>
+</div>
+<h1>Productos</h1>
+<div *ngIf="!loading">
+    <div *ngFor="let producto of productos">
+        <h2>{{producto.title}}</h2>
+        <p>{{producto.price}}</p>
+    </div>
+</div> -->
+<!-- <button (click)="addProduct()">Nuevo Producto</button>
+    <h3>Categorias</h3>
+    <div *ngFor="let categoria of categorias">
+        <p>{{categoria}}</p>
+    </div>     -->
