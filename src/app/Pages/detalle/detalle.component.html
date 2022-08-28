@@ -4,8 +4,7 @@
 <div *ngIf="!isLoading">
     <div>
         <h1>{{producto.title}}</h1>
-        <!-- <p>Precio: {{producto.price | currency:'ARS'}}</p> -->
-        <p>{{producto.price}}</p>
+        <p>Precio: {{producto.price | currency:'ARS'}}</p>
         <img src={{producto.thumbnail}} alt="">
     </div>
 </div>
