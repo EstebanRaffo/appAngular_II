@@ -4,10 +4,8 @@
     <div *ngFor="let producto of productosObs | async">
         <h2>{{producto.title | uppercase}}</h2>
         <p>{{producto.price | currency:'ARS'}}</p>
-        <!-- <h2>{{producto.title | concatenar:'Esteban':'Hola'}}</h2> -->
-        <!-- <p>{{producto | json}}</p> --> 
-        <button>Ver detalle</button>
-        <button>Comprar</button>
+        <button routerLink="/productos/{{producto.id}}">Ver detalle</button>
+        <!-- <button>Comprar</button> -->
     </div>
 </div>
 

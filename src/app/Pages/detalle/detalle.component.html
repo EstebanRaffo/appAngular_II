@@ -1,0 +1,11 @@
+<div *ngIf="isLoading">
+    Loading...
+</div>
+<div *ngIf="!isLoading">
+    <div>
+        <h1>{{producto.title}}</h1>
+        <!-- <p>Precio: {{producto.price | currency:'ARS'}}</p> -->
+        <p>{{producto.price}}</p>
+        <img src={{producto.thumbnail}} alt="">
+    </div>
+</div>
