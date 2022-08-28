@@ -1,12 +1,21 @@
 <form [formGroup]="myLogin" (ngSubmit)="login()">
     <div>
         <label>Email</label>
-        <input type="email" formControlName="email">
+        <input type="email" formControlName="email" [ngClass]="{error:myLogin.get('email')?.hasError('email')}">
+        <div *ngIf="myLogin.get('email')?.dirty && myLogin.get('email')?.errors">
+            <p>Formato email invalido</p>
+        </div>
     </div>
     <br>
     <div>
         <label>Password</label>
-        <input type="password" formControlName="password">
+        <input type="password" formControlName="password" [ngClass]="{error:myLogin.get('password')?.hasError('required') 
+        && myLogin.get('password')?.dirty, warning:myLogin.get('password')?.hasError('minlength') || myLogin.get('password')?.hasError('maxlength')}">
+    </div>
+    <div *ngIf="myLogin.get('password')?.errors && myLogin.get('password')?.dirty">
+        <p *ngIf="myLogin.get('password')?.hasError('required')">Campo obligatorio</p>
+        <p *ngIf="myLogin.get('password')?.hasError('minlength') || myLogin.get('password')?.hasError('maxlength')">
+            La clave debe tener entre 6 y 10 caracteres</p>
     </div>
     <br>
     <button [disabled]="myLogin.invalid" type="submit">Login</button>

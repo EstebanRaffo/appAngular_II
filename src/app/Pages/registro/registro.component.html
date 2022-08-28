@@ -12,7 +12,8 @@
     <br>
     <div>
         <label>Apellido</label>
-        <input type="text" formControlName="apellido">
+        <input type="text" formControlName="apellido" [ngClass]="{error:myForm.get('apellido')?.hasError('required') 
+        && myForm.get('apellido')?.dirty, warning:myForm.get('apellido')?.hasError('minlength')}">
     </div>
     <div *ngIf="myForm.get('apellido')?.errors && myForm.get('apellido')?.dirty">
         <p *ngIf="myForm.get('apellido')?.hasError('required')">Campo obligatorio</p>
@@ -27,7 +28,7 @@
     <div>
         <label>Email</label>
         <input type="email" formControlName="correo" [ngClass]="{error:myForm.get('correo')?.hasError('email')}">
-        <div *ngIf="myForm.get('correo')?.errors && myForm.get('clave')?.dirty">
+        <div *ngIf="myForm.get('correo')?.errors && myForm.get('correo')?.dirty">
             <p>Formato email invalido</p>
         </div>
     </div>
