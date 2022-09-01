@@ -18,6 +18,18 @@ export class HomeComponent implements OnInit {
   titulo:string=""
   categorias:string[]=[]
   constructor(private productosServices: ProductosService) {
+    this.init()
+  }
+  // async init(){
+  //   try {
+  //     const response:any = await this.productosServices.getAllPromise()
+  //     this.productosAsync = response["results"]
+  //   } catch (error) {
+      
+  //   }
+  // }
+
+  init(){
     // para ver el observable hasta que resuelva la llamada debe suscribirse, similar al .then de las promesas en JS
     const title:string=""
     this.productosServices.getAll().subscribe({
@@ -32,16 +44,11 @@ export class HomeComponent implements OnInit {
     })
     
     this.productosObs = this.productosServices.getAllPipe()
-    // this.init()
   }
-  // async init(){
-  //   try {
-  //     const response:any = await this.productosServices.getAllPromise()
-  //     this.productosAsync = response["results"]
-  //   } catch (error) {
-      
-  //   }
-  // }
+
+  recargar(){
+    this.init() 
+  }
 
   ngOnInit(): void {
   }

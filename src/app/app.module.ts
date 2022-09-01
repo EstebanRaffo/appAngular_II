@@ -11,6 +11,7 @@ import { DetalleComponent } from './Pages/detalle/detalle.component';
 import {HttpClientModule} from '@angular/common/http';
 import { MenuComponent } from './Components/menu/menu.component';
 import { ListadosModule } from './listados/listados.module';
+import { ProductComponent } from './Components/product/product.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ListadosModule } from './listados/listados.module';
     RegistroComponent,
     CatalogoComponent,
     DetalleComponent,
-    MenuComponent
+    MenuComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

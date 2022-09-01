@@ -2,10 +2,10 @@
 <div>
     <!-- async indica que cuando resuelve la llamada y productosObs tiene los valores, recorrerá el array-->
     <div *ngFor="let producto of productosObs | async">
-        <h2>{{producto.title | uppercase}}</h2>
-        <p>{{producto.price | currency:'ARS'}}</p>
-        <button routerLink="/productos/{{producto.id}}">Ver detalle</button>
-        <!-- <button>Comprar</button> -->
+        <app-product
+            [data]="producto"
+            (reload)="recargar()"
+            ></app-product>
     </div>
 </div>
 

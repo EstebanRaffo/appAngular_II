@@ -1,0 +1,4 @@
+<h2>{{data.title}}</h2>
+<p>{{data.price | currency:'ARS'}}</p>
+<button routerLink="/productos/{{data.id}}">Ver detalle</button>
+<button (click)="eliminar()">Eliminar</button>
