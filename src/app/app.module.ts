@@ -12,6 +12,12 @@ import {HttpClientModule} from '@angular/common/http';
 import { MenuComponent } from './Components/menu/menu.component';
 import { ListadosModule } from './listados/listados.module';
 import { ProductComponent } from './Components/product/product.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -30,7 +36,13 @@ import { ProductComponent } from './Components/product/product.component';
     AppRoutingModule,
     FormsModule, ReactiveFormsModule,
     HttpClientModule,
-    ListadosModule
+    ListadosModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

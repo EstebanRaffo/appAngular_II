@@ -4,3 +4,6 @@
 .warning{
     background-color: yellow;
 }
+.login{
+    min-height: 300px;
+}

@@ -1,5 +1,8 @@
-<!-- app-main arrojaba error porque no pertenece al app.module si no a listados.module -->
-<app-main></app-main> 
-<app-menu></app-menu>
-<router-outlet></router-outlet>
-Footer
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened><app-menu></app-menu></mat-drawer>
+    <mat-drawer-content>
+        <div class="container">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

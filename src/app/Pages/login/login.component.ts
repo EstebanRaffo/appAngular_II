@@ -1,3 +1,4 @@
+import { AuthService } from 'src/app/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -12,15 +13,16 @@ export class LoginComponent implements OnInit {
   modificado = false
   myLogin:FormGroup
 
-  constructor(private fl:FormBuilder) {
+  constructor(private fl:FormBuilder, private authService: AuthService) {
     this.myLogin = this.fl.group({
       email:["",[Validators.required, Validators.email]],
-      password:["",[Validators.required, Validators.minLength(6), Validators.maxLength(10)]]  
+      password:["",[Validators.required, Validators.minLength(3), Validators.maxLength(8)]]  
     })
   }
   
   login(){
     console.log(this.myLogin.value)
+    this.authService.login()
   }
 
   cambiarTitle(){

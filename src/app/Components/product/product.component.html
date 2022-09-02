@@ -1,4 +1,14 @@
-<h2>{{data.title}}</h2>
-<p>{{data.price | currency:'ARS'}}</p>
-<button routerLink="/productos/{{data.id}}">Ver detalle</button>
-<button (click)="eliminar()">Eliminar</button>
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{data.title}}</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src={{data.thumbnail}} alt="Photo of a Shiba Inu">
+    <mat-card-content><p>{{data.price | currency:'ARS'}}</p></mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" routerLink="/productos/{{data.id}}">Ver detalle</button>
+      <!-- <button mat-raised-button color="warn" (click)="eliminar()" *ngIF="isLogin">Eliminar</button> -->
+    </mat-card-actions>
+</mat-card>
+  
