@@ -1,4 +1,8 @@
 .example-card {
     max-width: 190px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  img{
+    max-width: 150px;
   }

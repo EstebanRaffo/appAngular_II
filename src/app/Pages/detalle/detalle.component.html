@@ -3,8 +3,10 @@
 </div>
 <div *ngIf="!isLoading">
     <div>
-        <h1>{{producto.title}}</h1>
-        <p>Precio: {{producto.price | currency:'ARS'}}</p>
+        <h1><a href={{producto.permalink}}>{{producto.title}}</a></h1>
+        <h4>{{producto.domain_id}}</h4>
+        <p>Precio: {{producto.price | currency}}</p>
         <img src={{producto.thumbnail}} alt="">
+        <!-- <h3><a href={{producto.seller.permalink}}>Contactar al Vendedor</a></h3> -->
     </div>
 </div>

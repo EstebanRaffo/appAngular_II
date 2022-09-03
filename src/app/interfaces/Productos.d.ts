@@ -9,10 +9,18 @@ export interface Producto{
     official_store_id:number;
     base_price:number;
     thumbnail:string;
+    permalink:string;
+    domain_id:string;
+    seller:{
+        permalink:string
+    };
     seller_address:{
         id:string;
         comment:string;
     };
+    address:{
+        state_name:string
+    }
     attributes:[
         {
             [k:string]:string | number | boolean

@@ -1,5 +1,5 @@
-<h1>Productos pipe async</h1>
-<div>
+<h1>Productos</h1>
+<div class="productos-container">
     <!-- async indica que cuando resuelve la llamada y productosObs tiene los valores, recorrerá el array-->
     <div *ngFor="let producto of productosObs | async">
         <app-product
